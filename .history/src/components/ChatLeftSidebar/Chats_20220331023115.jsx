@@ -1,0 +1,20 @@
+import UserImage from "../UserImage";
+import ChatHader from "./ChatHader";
+
+export default function ChatList() {
+  return (
+    <div className="w-72 h-screen ">
+      <ChatHader />
+      <div className="flex flex-col">
+        <div className="flex justify-start ">
+          <UserImage className="w" />
+          <p>Khokon devsharma</p>
+        </div>
+        <div className="flex  justify-start ">
+          <UserImage />
+          <p>Satya ranjon devsharma</p>
+        </div>
+      </div>
+    </div>
+  );
+}
