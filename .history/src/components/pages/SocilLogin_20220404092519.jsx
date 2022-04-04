@@ -1,0 +1,20 @@
+import React from "react";
+import { BsFacebook } from "react-icons/bs";
+import { FcGoogle } from "react-icons/fc";
+import { FaTwitter } from "react-icons/fa";
+
+export default function SocilLogin() {
+  return (
+    <div className="flex justify-between">
+      <button className="text-sky-400 text-2xl">
+        <BsFacebook />
+      </button>
+      <button className="">
+        <FcGoogle />
+      </button>
+      <button className="text-sky-400">
+        <FaTwitter />
+      </button>
+    </div>
+  );
+}
