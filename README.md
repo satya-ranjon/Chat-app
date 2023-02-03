@@ -1,6 +1,6 @@
 ## Chat App - v1.0<br/>
 
-# <a href="https://whatsapp-clone-dev.netlify.app/" target="_blank">Demo Link - - -</a>
+# <a href="https://chat-app-beige-three.vercel.app" target="_blank">Demo Link - - -</a>
 
 ## 🖥️ Tech Stack
 
