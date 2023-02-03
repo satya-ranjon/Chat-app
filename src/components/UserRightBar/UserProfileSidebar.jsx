@@ -7,10 +7,10 @@ import UserInfoRB from "./UserInfoRB";
 
 const array = [1, 2, 3, 4];
 
-export default function UserProfileSidebar() {
+export default function UserProfileSidebar({ setToggle }) {
   return (
     <div className="w-[380px] h-screen transition-all duration-300 p-4 fixed xl:relative right-0 bg-white dark:bg-[#262626] ">
-      <FbprofileHaderr />
+      <FbprofileHaderr setToggle={setToggle} />
       <div className="overflow-x-hidden overflow-y-scroll h-[660px] from-inherit style__1 transition-all duration-500">
         <MenuOption />
         <UserInfoRB />

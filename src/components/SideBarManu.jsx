@@ -10,14 +10,15 @@ import {
 } from "react-icons/md";
 import { FiSettings } from "react-icons/fi";
 import UserImage from "./UserImage";
+import { Link, useLocation } from "react-router-dom";
 
 export default function SideBarManu() {
-  const [toggle, setToggle] = useState(true);
   const [theme, setTheme] = useState("");
 
   useEffect(() => {
     setTheme("dark");
   }, []);
+
   const DarkTheme = () => {
     const root = window.document.documentElement;
     root.classList.add(theme);
@@ -29,6 +30,8 @@ export default function SideBarManu() {
     setTheme("dark");
   };
 
+  const { pathname } = useLocation();
+  const parm = pathname.slice(1);
   return (
     <div className="sm:w-[75px] sm:h-screen bg-[#2e2e2e] flex sm:flex-col sm:justify-between sm:static mobile  flex-row w-full absolute bottom-0 justify-center z-10 ">
       <div className="flex sm:flex-col sm:space-x-0 flex-row space-x-4">
@@ -37,25 +40,28 @@ export default function SideBarManu() {
           className="text-center  m-5 cursor-pointer mx-auto hidden sm:block"
           size={28}
         />
-        <div
+        <Link
+          to="/m"
           className={` ${
-            toggle ? `border-[#2e2e2e]` : `border-[#4eac6d]`
-          } sm:border-r-4 transition-all duration-200  `}
-          onClick={() => setToggle((prev) => !prev)}
-        >
+            parm == "m" ? ` border-[#4eac6d]` : `border-[#2e2e2e]`
+          } sm:border-r-4 transition-all duration-200  `}>
           <BiUserCircle
-            color={toggle ? `#878a92` : `#4eac6d`}
+            color={parm == "m" ? `#4eac6d` : `#878a92`}
             className="text-center  m-5 cursor-pointer mx-auto   "
             size={28}
           />
-        </div>
-        <div className="sm:border-r-4 border-[#2e2e2e] transition-all duration-200 ">
+        </Link>
+        <Link
+          to="/p"
+          className={` ${
+            parm == "p" ? ` border-[#4eac6d]` : `border-[#2e2e2e]`
+          } sm:border-r-4 transition-all duration-200  `}>
           <TiMessages
-            color="#878a92"
+            color={parm == "p" ? `#4eac6d` : `#878a92`}
             className="text-center  m-5 cursor-pointer mx-auto"
             size={28}
           />
-        </div>
+        </Link>
         <div className="sm:border-r-4 border-[#2e2e2e] transition-all duration-200 ">
           <CgUserList
             color="#878a92"

@@ -1,9 +1,8 @@
 import React from "react";
-import { useToggle } from "../../context/toggleContext";
 import { VscChromeClose } from "react-icons/vsc";
 import InfoBarIcom from "../../assets/InfoBarIcom";
-export default function FbprofileHaderr() {
-  const { setToggle } = useToggle();
+
+export default function FbprofileHaderr({ setToggle }) {
   return (
     <div className="relative before:w-full before:h-full before:bg-gradient-to-t from-[#0404044f] to-[#0a0a0b7c] before:absolute before:left-0 mb-2 ">
       <img

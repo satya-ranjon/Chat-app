@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import SocilLogin from "./SocilLogin";
 
 export default function Login() {
@@ -18,9 +19,12 @@ export default function Login() {
         name="password"
         id="password"
       />
-      <button className="w-full p-2 my-2 mb-3 bg-green-500 border-none outline-none rounded-sm text-white">
-        Login
-      </button>
+
+      <Link to="/m">
+        <button className="w-full p-2 my-2 mb-3 bg-green-500 border-none outline-none rounded-sm text-white">
+          Login
+        </button>
+      </Link>
       <div className="flex my-5">
         <div className="w-full bg-neutral-600 h-[1px] my-auto"></div>
         <p className="w-screen text-center">Sign in with</p>
@@ -28,7 +32,7 @@ export default function Login() {
       </div>
       <SocilLogin />
       <p className="text-center my-5">
-        Don't have an account ?{" "}
+        Don't have an account ?
         <span className="text-green-500 cursor-pointer">Register</span>
       </p>
     </div>
